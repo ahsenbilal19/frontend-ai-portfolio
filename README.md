@@ -17,35 +17,42 @@
 
 This repository contains my capstone project for the **FlyRank Frontend AI Engineering Internship**.
 
-The project is currently in its initial setup phase. Throughout the internship, it will evolve into a modern AI-powered portfolio website showcasing my frontend development skills, AI-assisted workflows, and completed internship assignments.
+The project is currently in its initial setup phase. Throughout the internship, it will evolve into a modern AI-powered portfolio website that demonstrates frontend engineering skills, AI-assisted development workflows, and completed internship assignments.
 
-This repository will be updated continuously as I complete each week's work.
+Every assignment completed during the internship contributes to this repository, allowing it to grow into a production-quality portfolio.
 
 ---
 
-# 🎯 Project Goals
+# 🎯 Objectives
 
-The objectives of this project are to:
+The goals of this project are to:
 
-- Build a modern portfolio using React and Next.js.
-- Learn AI-assisted software development workflows.
-- Follow professional Git and GitHub practices.
-- Write clean, maintainable, and reusable code.
-- Showcase internship assignments and completed projects.
-- Deploy the final application for public access.
+- Build a professional portfolio using **React** and **Next.js**
+- Learn modern AI-assisted software development workflows
+- Follow industry-standard Git and GitHub practices
+- Write clean, reusable, and maintainable code
+- Apply frontend best practices including accessibility and responsive design
+- Deploy the final application for public use
 
 ---
 
 # 🛠️ Technology Stack
 
-The project will primarily use:
+This project uses:
 
 - React
 - Next.js
 - TypeScript
 - Tailwind CSS
 - Git & GitHub
-- AI Coding Assistants
+- AI Coding Assistants (Blackbox AI, ChatGPT)
+
+Future additions may include:
+
+- React Hook Form
+- Zod
+- Framer Motion
+- Vercel
 
 ---
 
@@ -54,79 +61,91 @@ The project will primarily use:
 Current progress:
 
 - ✅ Repository created
-- ✅ GitHub initialized
-- ✅ README added
-- ✅ LICENSE added
-- ✅ .gitignore configured
+- ✅ GitHub configured
+- ✅ Development environment setup
 - ✅ CLAUDE.md created
-- 🔄 Beginning project development
+- ✅ AGENTS.md created
+- ✅ Next.js initialized
+- 🔄 Beginning feature development
 
 ---
 
 # ✨ Planned Features
 
-The following features will be implemented during the internship:
+Throughout the internship this portfolio will include:
 
-- Responsive portfolio website
+- Responsive landing page
 - About Me section
 - Skills showcase
-- Projects gallery
-- Internship assignment showcase
-- Certificates section
-- Resume download
+- Featured Projects
+- Internship assignments
+- Profile Settings page
 - Contact form
+- Resume download
 - Dark mode
 - AI-assisted development workflow
 
 ---
 
-# 📁 Project Structure
+# 📂 Project Structure
 
-```
+```text
 frontend-ai-portfolio/
-
+│
+├── public/
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── lib/
+│   └── styles/
+│
 ├── README.md
-├── LICENSE
-├── .gitignore
 ├── CLAUDE.md
-└── (Project files will be added throughout the internship)
+├── AGENTS.md
+├── LICENSE
+├── package.json
+└── tsconfig.json
 ```
 
 ---
 
 # 🗺️ Roadmap
 
-- [x] Create GitHub repository
-- [x] Configure development environment
-- [x] Configure Git
-- [x] Add project documentation
-- [ ] Initialize Next.js project
-- [ ] Design portfolio UI
-- [ ] Build reusable components
-- [ ] Integrate AI-powered features
+- [x] Repository setup
+- [x] Configure Git & GitHub
+- [x] Create project documentation
+- [x] Initialize Next.js project
+- [ ] Build Profile Settings Form
+- [ ] Create reusable UI components
+- [ ] Build Portfolio Homepage
+- [ ] Add Projects section
+- [ ] Add Contact section
 - [ ] Deploy to Vercel
 
 ---
 
 # 🤝 AI-Assisted Development
 
-This project is developed using AI-assisted software engineering practices as part of the FlyRank Frontend AI Engineering Internship.
+This project is developed using AI-assisted engineering practices.
 
-AI tools are used to assist with:
+AI is used for:
 
-- Documentation
-- Code reviews
 - Planning
+- Documentation
+- Code generation
+- Code review
 - Refactoring
-- Best practices
+- Testing assistance
 
-All generated code is reviewed, understood, and modified before being committed.
+All AI-generated code is reviewed, tested, and understood before being committed.
 
 ---
 
 # 📄 License
 
 This project is licensed under the MIT License.
+
+See the **LICENSE** file for details.
 
 ---
 
