@@ -1,53 +1,45 @@
-# AI Development Workflow Comparison
+# AI Workflow Comparison (FE-03)
 
 ## Overview
 
-This assignment compares two different AI-assisted development workflows while building the same feature: a Profile Settings page.
+For this assignment, I built the same Profile Settings feature twice using two different AI prompting approaches. The purpose was to compare the quality of the generated code and understand how prompt quality affects the final implementation.
 
-### Round 1 – Vague Prompt
+## Round 1 – Vague Prompt
 
-For the first implementation, I intentionally used a minimal prompt:
+For the first attempt, I used a simple prompt:
 
 > "Build me a profile settings form using React."
 
-The AI generated a surprisingly complete solution containing validation, avatar upload, social links, loading states, and responsive styling. However, the implementation relied heavily on a single large component with manual state management using React's `useState`. There were no automated tests, no reusable UI components, and validation logic was manually implemented.
+The AI generated a functional form with common fields such as Full Name, Username, Email, Bio, and Social Links. It also included avatar upload functionality and basic validation.
 
-Although the generated feature worked correctly, reviewing the code required more effort because many responsibilities were combined into one file.
+Although the UI looked good, the generated code was contained mostly in one component. There was little separation of concerns, reusable components were not created, and validation logic was relatively simple. The implementation required manual review to verify accessibility, maintainability, and project structure.
 
----
+## Round 2 – Detailed Prompt
 
-### Round 2 – Detailed Prompt
+For the second attempt, I used a much more detailed prompt that included project context, folder structure, coding constraints, accessibility requirements, reusable components, Zod validation, React Hook Form, and verification instructions.
 
-For the second implementation, I started a completely new AI session and provided detailed project context, technical constraints, accessibility requirements, folder structure, verification steps, and best practices.
+The generated implementation was significantly better. The AI organized the project into multiple reusable components, separated validation schemas, constants, and TypeScript types into dedicated files, and followed modern Next.js practices.
 
-The AI produced a significantly more maintainable architecture.
+The implementation also included:
 
-Improvements included:
-
-- React Hook Form for state management
+- React Hook Form
 - Zod schema validation
+- Accessible form controls
 - Reusable UI components
-- Better separation of concerns
-- Strong TypeScript typing
-- Accessibility improvements
 - Loading skeleton
-- Next.js Image
-- Explicit verification process
+- Better project organization
+- Responsive layout
 
-The generated code required much less manual review because the prompt clearly defined expectations before generation.
+## AI Mistakes I Caught
 
----
+The AI did not install all required dependencies automatically, which caused missing module errors for `react-hook-form` and `@hookform/resolvers`.
 
-## AI Mistake I Caught
+There was also a React Compiler warning caused by using `watch()`, which I fixed by replacing it with `useWatch()`.
 
-The AI initially placed the first implementation under `/profile`, while the assignment example referred to a settings feature. During review, I recognized that organizing the final implementation under `/settings` aligned better with the project structure and assignment intent.
+I also corrected a Tailwind CSS warning by replacing `min-h-[80px]` with the equivalent utility class.
 
----
+## Comparison
 
-## Reflection
+Although Round 2 required more planning and a longer prompt, it reduced the amount of manual cleanup needed afterward. The generated code was easier to understand, easier to maintain, and followed better engineering practices.
 
-This exercise demonstrated that prompt quality has a direct impact on code quality.
-
-Although writing a detailed prompt required more upfront effort, it reduced review time, improved maintainability, and resulted in cleaner architecture.
-
-The biggest lesson I learned is that AI performs much better when given project context, clear constraints, and explicit verification instructions rather than vague requests.
+This exercise demonstrated that investing time in writing a detailed prompt produces higher-quality AI-generated code and reduces review effort in the long run.
