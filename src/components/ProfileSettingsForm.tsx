@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Image from "next/image";
 
 import {
   profileSettingsSchema,
@@ -19,20 +18,31 @@ export default function ProfileSettingsForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const {
-    register,
-    handleSubmit,
-    reset,
-    watch,
-    setValue,
-    formState: { errors, isDirty },
-  } = useForm<ProfileSettingsFormValues>({
-    resolver: zodResolver(profileSettingsSchema),
-    defaultValues: DEFAULT_PROFILE_SETTINGS,
-  });
+  register,
+  handleSubmit,
+  reset,
+  control,
+  setValue,
+  formState: { errors, isDirty },
+} = useForm<ProfileSettingsFormValues>({
+  resolver: zodResolver(profileSettingsSchema),
+  defaultValues: DEFAULT_PROFILE_SETTINGS,
+});
 
-  const darkMode = watch("darkMode");
-  const emailNotifications = watch("emailNotifications");
-  const profilePicture = watch("profilePicture");
+  const darkMode = useWatch({
+  control,
+  name: "darkMode",
+});
+
+const emailNotifications = useWatch({
+  control,
+  name: "emailNotifications",
+});
+
+const profilePicture = useWatch({
+  control,
+  name: "profilePicture",
+});
 
   const onSubmit = async (data: ProfileSettingsFormValues) => {
     setIsSubmitting(true);

@@ -31,7 +31,7 @@ export default function TextareaField({
         rows={4}
         aria-invalid={error ? true : undefined}
         aria-describedby={error ? errorId : undefined}
-        className={`rounded-lg border bg-white px-3.5 py-2.5 text-sm text-zinc-900 outline-none transition-colors placeholder:text-zinc-400 focus:ring-2 focus:ring-offset-1 dark:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-500 resize-y min-h-[80px] ${
+        className={`rounded-lg border bg-white px-3.5 py-2.5 text-sm text-zinc-900 outline-none transition-colors placeholder:text-zinc-400 focus:ring-2 focus:ring-offset-1 dark:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-500 resize-y min-h-20 ${
           error
             ? "border-red-500 focus:ring-red-400 dark:border-red-400"
             : "border-zinc-300 focus:ring-indigo-500 dark:border-zinc-600 dark:focus:ring-indigo-400"
